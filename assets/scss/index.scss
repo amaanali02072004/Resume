@@ -1,0 +1,179 @@
+:root {
+	--fs-35: 60px;
+	--fs-14: calc(var(--fs-35) / 2.5);
+	--fs-12: calc(var(--fs-35) / 2.9);
+	--fs-11: calc(var(--fs-35) / 3.18);
+	--ff-ibm: 'IBM Plex Serif', serif;
+	--ff-arimo: 'Arimo', sans-serif;
+	--primary-100: #0d2840;
+	--primary-200: #0d2840;
+	--lhsBg: #d6e8f4;
+	--lhsWidth: 40%;
+	--rhsWidth: calc(100% - var(--lhsWidth));
+}
+
+*,
+*:after,
+*:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	// line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-ibm);
+}
+
+span,
+a,
+li,
+p {
+	font-family: var(--ff-arimo);
+	font-weight: 300;
+}
+
+.container {
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.lhs {
+	width: var(--lhsWidth);
+}
+
+.rhs {
+	width: var(--rhsWidth);
+	padding: 0 80px;
+}
+
+.headerWrapper {
+	height: 200px;
+	width: 100%;
+	.headerInnerWrapper {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		background: var(--primary-100);
+		.lhs {
+			height: 100%;
+			background: white;
+		}
+		.rhs {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h1,
+			h2 {
+				text-transform: capitalize;
+				color: white;
+			}
+			h1 {
+				font-size: var(--fs-35);
+				line-height: 1.2;
+			}
+			h2 {
+				font-size: var(--fs-14);
+			}
+		}
+	}
+}
+
+.contentWrapper {
+	display: flex;
+	.lhs,
+	.rhs {
+		padding: 0 80px;
+		.box {
+			padding-top: 50px;
+			&:last-child {
+				padding-bottom: 50px;
+			}
+			h3 {
+				text-transform: capitalize;
+				font-size: var(--fs-12);
+				color: var(--primary-100);
+			}
+			ul,
+			> div {
+				padding-top: 20px;
+				li,
+				a,
+				p {
+					font-size: var(--fs-11);
+					color: var(--primary-200);
+					font-weight: 300;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+			ul {
+				padding-left: 40px;
+				text-transform: capitalize;
+				> li {
+					&:not(:last-child) {
+						padding-bottom: 3px;
+					}
+				}
+			}
+		}
+	}
+	.lhs {
+		display: flex;
+		flex-direction: column;
+		background: var(--lhsBg);
+		.contactBox {
+		}
+		.skillsBox {
+			ul {
+			}
+		}
+		.volunteerBox {
+			div {
+				p {
+					text-transform: capitalize;
+					&::first-line {
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	.rhs {
+		background: white;
+		.box {
+			> div {
+				display: flex;
+				.logo {
+					display: flex;
+					justify-content: center;
+					margin-right: 30px;
+					> span {
+						font-size: 50px;
+					}
+				}
+				.data {
+					p {
+						&::first-line {
+							font-weight: bold;
+						}
+						// &::last-line {
+						// 	font-style: italic;
+						// }
+					}
+				}
+			}
+		}
+		.workBox {
+		}
+		.educationBox {
+		}
+	}
+}

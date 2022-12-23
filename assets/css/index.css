@@ -1,0 +1,195 @@
+:root {
+		--fs-35: 60px;
+		--fs-14: calc(var(--fs-35) / 2.5);
+		--fs-12: calc(var(--fs-35) / 2.9);
+		--fs-11: calc(var(--fs-35) / 3.18);
+		--ff-ibm: "IBM Plex Serif", serif;
+		--ff-arimo: "Arimo", sans-serif;
+		--primary-100: #0d2840;
+		--primary-200: #0d2840;
+		--lhsBg: #d6e8f4;
+		--lhsWidth: 40%;
+		--rhsWidth: calc(100% - var(--lhsWidth));
+}
+
+*,
+*:after,
+*:before {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+		font-family: var(--ff-ibm);
+}
+
+span,
+a,
+li,
+p {
+		font-family: var(--ff-arimo);
+		font-weight: 300;
+}
+
+.container {
+		max-width: 1280px;
+		width: 100%;
+		margin: 0 auto;
+}
+
+.lhs {
+		width: var(--lhsWidth);
+}
+
+.rhs {
+		width: var(--rhsWidth);
+		padding: 0 80px;
+}
+
+.headerWrapper {
+		height: 200px;
+		width: 100%;
+}
+.headerWrapper .headerInnerWrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		background: var(--primary-100);
+}
+.headerWrapper .headerInnerWrapper .lhs {
+		height: 100%;
+		background: white;
+}
+.headerWrapper .headerInnerWrapper .rhs {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+}
+.headerWrapper .headerInnerWrapper .rhs h1,
+.headerWrapper .headerInnerWrapper .rhs h2 {
+		text-transform: capitalize;
+		color: white;
+}
+.headerWrapper .headerInnerWrapper .rhs h1 {
+		font-size: var(--fs-35);
+		line-height: 1.2;
+}
+.headerWrapper .headerInnerWrapper .rhs h2 {
+		font-size: var(--fs-14);
+}
+
+.contentWrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+}
+.contentWrapper .lhs,
+.contentWrapper .rhs {
+		padding: 0 80px;
+}
+.contentWrapper .lhs .box,
+.contentWrapper .rhs .box {
+		padding-top: 50px;
+}
+.contentWrapper .lhs .box:last-child,
+.contentWrapper .rhs .box:last-child {
+		padding-bottom: 50px;
+}
+.contentWrapper .lhs .box h3,
+.contentWrapper .rhs .box h3 {
+		text-transform: capitalize;
+		font-size: var(--fs-12);
+		color: var(--primary-100);
+}
+.contentWrapper .lhs .box ul,
+.contentWrapper .lhs .box > div,
+.contentWrapper .rhs .box ul,
+.contentWrapper .rhs .box > div {
+		padding-top: 20px;
+}
+.contentWrapper .lhs .box ul li,
+.contentWrapper .lhs .box ul a,
+.contentWrapper .lhs .box ul p,
+.contentWrapper .lhs .box > div li,
+.contentWrapper .lhs .box > div a,
+.contentWrapper .lhs .box > div p,
+.contentWrapper .rhs .box ul li,
+.contentWrapper .rhs .box ul a,
+.contentWrapper .rhs .box ul p,
+.contentWrapper .rhs .box > div li,
+.contentWrapper .rhs .box > div a,
+.contentWrapper .rhs .box > div p {
+		font-size: var(--fs-11);
+		color: var(--primary-200);
+		font-weight: 300;
+}
+.contentWrapper .lhs .box ul a,
+.contentWrapper .lhs .box > div a,
+.contentWrapper .rhs .box ul a,
+.contentWrapper .rhs .box > div a {
+		text-decoration: none;
+}
+.contentWrapper .lhs .box ul,
+.contentWrapper .rhs .box ul {
+		padding-left: 40px;
+		text-transform: capitalize;
+}
+.contentWrapper .lhs .box ul > li:not(:last-child),
+.contentWrapper .rhs .box ul > li:not(:last-child) {
+		padding-bottom: 3px;
+}
+.contentWrapper .lhs {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		background: var(--lhsBg);
+}
+.contentWrapper .lhs .volunteerBox div p {
+		text-transform: capitalize;
+}
+.contentWrapper .lhs .volunteerBox div p::first-line {
+		font-weight: bold;
+}
+.contentWrapper .rhs {
+		background: white;
+}
+.contentWrapper .rhs .box > div {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+}
+.contentWrapper .rhs .box > div .logo {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		margin-right: 30px;
+}
+.contentWrapper .rhs .box > div .logo > span {
+		font-size: 50px;
+}
+.contentWrapper .rhs .box > div .data p::first-line {
+		font-weight: bold;
+}
