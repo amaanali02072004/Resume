@@ -1,5 +1,6 @@
 :root {
 	--fs-35: 60px;
+	--fs-29: calc(var(--fs-35) / 1.2);
 	--fs-14: calc(var(--fs-35) / 2.5);
 	--fs-12: calc(var(--fs-35) / 2.9);
 	--fs-11: calc(var(--fs-35) / 3.18);
@@ -38,11 +39,11 @@ p {
 	font-weight: 300;
 }
 
-.container {
-	max-width: 1280px;
-	width: 100%;
-	margin: 0 auto;
-}
+// .container {
+// 	max-width: 1280px;
+// 	width: 100%;
+// 	margin: 0 auto;
+// }
 
 .lhs {
 	width: var(--lhsWidth);
@@ -156,7 +157,7 @@ p {
 					justify-content: center;
 					margin-right: 30px;
 					> span {
-						font-size: 50px;
+						font-size: var(--fs-29);
 					}
 				}
 				.data {
