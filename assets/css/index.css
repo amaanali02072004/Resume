@@ -39,20 +39,20 @@ p {
 		font-weight: 300;
 }
 
-.lhs {
+.resume-lhs {
 		width: var(--lhsWidth);
 }
 
-.rhs {
+.resume-rhs {
 		width: var(--rhsWidth);
 		padding: 0 80px;
 }
 
-.headerWrapper {
+.headerOuterWrapper {
 		height: 200px;
 		width: 100%;
 }
-.headerWrapper .headerInnerWrapper {
+.headerOuterWrapper .headerInnerWrapper {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -60,11 +60,11 @@ p {
 		height: 100%;
 		background: var(--primary-100);
 }
-.headerWrapper .headerInnerWrapper .lhs {
+.headerOuterWrapper .headerInnerWrapper .resume-lhs {
 		height: 100%;
 		background: white;
 }
-.headerWrapper .headerInnerWrapper .rhs {
+.headerOuterWrapper .headerInnerWrapper .resume-rhs {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -76,16 +76,16 @@ p {
 		    -ms-flex-pack: center;
 		        justify-content: center;
 }
-.headerWrapper .headerInnerWrapper .rhs h1,
-.headerWrapper .headerInnerWrapper .rhs h2 {
+.headerOuterWrapper .headerInnerWrapper .resume-rhs h1,
+.headerOuterWrapper .headerInnerWrapper .resume-rhs h2 {
 		text-transform: capitalize;
 		color: white;
 }
-.headerWrapper .headerInnerWrapper .rhs h1 {
+.headerOuterWrapper .headerInnerWrapper .resume-rhs h1 {
 		font-size: var(--fs-35);
 		line-height: 1.2;
 }
-.headerWrapper .headerInnerWrapper .rhs h2 {
+.headerOuterWrapper .headerInnerWrapper .resume-rhs h2 {
 		font-size: var(--fs-14);
 }
 
@@ -94,62 +94,62 @@ p {
 		display: -ms-flexbox;
 		display: flex;
 }
-.contentWrapper .lhs,
-.contentWrapper .rhs {
+.contentWrapper .resume-lhs,
+.contentWrapper .resume-rhs {
 		padding: 0 80px;
 }
-.contentWrapper .lhs .box,
-.contentWrapper .rhs .box {
+.contentWrapper .resume-lhs .box,
+.contentWrapper .resume-rhs .box {
 		padding-top: 50px;
 }
-.contentWrapper .lhs .box:last-child,
-.contentWrapper .rhs .box:last-child {
+.contentWrapper .resume-lhs .box:last-child,
+.contentWrapper .resume-rhs .box:last-child {
 		padding-bottom: 50px;
 }
-.contentWrapper .lhs .box h3,
-.contentWrapper .rhs .box h3 {
+.contentWrapper .resume-lhs .box h3,
+.contentWrapper .resume-rhs .box h3 {
 		text-transform: capitalize;
 		font-size: var(--fs-12);
 		color: var(--primary-100);
 }
-.contentWrapper .lhs .box ul,
-.contentWrapper .lhs .box > div,
-.contentWrapper .rhs .box ul,
-.contentWrapper .rhs .box > div {
+.contentWrapper .resume-lhs .box ul,
+.contentWrapper .resume-lhs .box > div,
+.contentWrapper .resume-rhs .box ul,
+.contentWrapper .resume-rhs .box > div {
 		padding-top: 20px;
 }
-.contentWrapper .lhs .box ul li,
-.contentWrapper .lhs .box ul a,
-.contentWrapper .lhs .box ul p,
-.contentWrapper .lhs .box > div li,
-.contentWrapper .lhs .box > div a,
-.contentWrapper .lhs .box > div p,
-.contentWrapper .rhs .box ul li,
-.contentWrapper .rhs .box ul a,
-.contentWrapper .rhs .box ul p,
-.contentWrapper .rhs .box > div li,
-.contentWrapper .rhs .box > div a,
-.contentWrapper .rhs .box > div p {
+.contentWrapper .resume-lhs .box ul li,
+.contentWrapper .resume-lhs .box ul a,
+.contentWrapper .resume-lhs .box ul p,
+.contentWrapper .resume-lhs .box > div li,
+.contentWrapper .resume-lhs .box > div a,
+.contentWrapper .resume-lhs .box > div p,
+.contentWrapper .resume-rhs .box ul li,
+.contentWrapper .resume-rhs .box ul a,
+.contentWrapper .resume-rhs .box ul p,
+.contentWrapper .resume-rhs .box > div li,
+.contentWrapper .resume-rhs .box > div a,
+.contentWrapper .resume-rhs .box > div p {
 		font-size: var(--fs-11);
 		color: var(--primary-200);
 		font-weight: 300;
 }
-.contentWrapper .lhs .box ul a,
-.contentWrapper .lhs .box > div a,
-.contentWrapper .rhs .box ul a,
-.contentWrapper .rhs .box > div a {
+.contentWrapper .resume-lhs .box ul a,
+.contentWrapper .resume-lhs .box > div a,
+.contentWrapper .resume-rhs .box ul a,
+.contentWrapper .resume-rhs .box > div a {
 		text-decoration: none;
 }
-.contentWrapper .lhs .box ul,
-.contentWrapper .rhs .box ul {
+.contentWrapper .resume-lhs .box ul,
+.contentWrapper .resume-rhs .box ul {
 		padding-left: 40px;
 		text-transform: capitalize;
 }
-.contentWrapper .lhs .box ul > li:not(:last-child),
-.contentWrapper .rhs .box ul > li:not(:last-child) {
+.contentWrapper .resume-lhs .box ul > li:not(:last-child),
+.contentWrapper .resume-rhs .box ul > li:not(:last-child) {
 		padding-bottom: 3px;
 }
-.contentWrapper .lhs {
+.contentWrapper .resume-lhs {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -159,21 +159,21 @@ p {
 		        flex-direction: column;
 		background: var(--lhsBg);
 }
-.contentWrapper .lhs .volunteerBox div p {
+.contentWrapper .resume-lhs .volunteerBox div p {
 		text-transform: capitalize;
 }
-.contentWrapper .lhs .volunteerBox div p::first-line {
+.contentWrapper .resume-lhs .volunteerBox div p::first-line {
 		font-weight: bold;
 }
-.contentWrapper .rhs {
+.contentWrapper .resume-rhs {
 		background: white;
 }
-.contentWrapper .rhs .box > div {
+.contentWrapper .resume-rhs .box > div {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 }
-.contentWrapper .rhs .box > div .logo {
+.contentWrapper .resume-rhs .box > div .logo {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -182,12 +182,12 @@ p {
 		        justify-content: center;
 		margin-right: 30px;
 }
-.contentWrapper .rhs .box > div .logo > span {
+.contentWrapper .resume-rhs .box > div .logo > span {
 		font-size: var(--fs-29);
 }
-.contentWrapper .rhs .box > div .data p:not(:first-child) {
+.contentWrapper .resume-rhs .box > div .data p:not(:first-child) {
 		padding-top: 50px;
 }
-.contentWrapper .rhs .box > div .data p::first-line {
+.contentWrapper .resume-rhs .box > div .data p::first-line {
 		font-weight: bold;
 }
