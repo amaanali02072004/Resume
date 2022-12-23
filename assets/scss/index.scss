@@ -161,6 +161,9 @@ p {
 				}
 				.data {
 					p {
+						&:not(:first-child) {
+							padding-top: 50px;
+						}
 						&::first-line {
 							font-weight: bold;
 						}

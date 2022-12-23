@@ -190,6 +190,9 @@ p {
 .contentWrapper .rhs .box > div .logo > span {
 		font-size: 50px;
 }
+.contentWrapper .rhs .box > div .data p:not(:first-child) {
+		padding-top: 50px;
+}
 .contentWrapper .rhs .box > div .data p::first-line {
 		font-weight: bold;
 }
