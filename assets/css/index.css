@@ -190,4 +190,8 @@ p {
 }
 .contentWrapper .resume-rhs .box > div .data p::first-line {
 		font-weight: bold;
+		text-transform: capitalize;
+}
+.contentWrapper .resume-rhs .box > div .data li {
+		text-transform: capitalize;
 }

@@ -167,10 +167,14 @@ p {
 						}
 						&::first-line {
 							font-weight: bold;
+							text-transform: capitalize;
 						}
 						// &::last-line {
 						// 	font-style: italic;
 						// }
+					}
+					li {
+						text-transform: capitalize;
 					}
 				}
 			}
