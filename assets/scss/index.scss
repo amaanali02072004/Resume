@@ -1,7 +1,7 @@
 :root {
 	--mainHeight: 1120px;
 	--headHeight: 200px;
-	--fs-35: 60px;
+	--fs-35: 50px;
 	--fs-29: calc(var(--fs-35) / 1.2);
 	--fs-14: calc(var(--fs-35) / 2.5);
 	--fs-12: calc(var(--fs-35) / 2.9);
@@ -21,7 +21,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	// line-height: 1;
 }
 
 h1,
@@ -138,12 +137,12 @@ p {
 		display: flex;
 		flex-direction: column;
 		background: var(--lhsBg);
-		.contactBox {
-		}
-		.skillsBox {
-			ul {
-			}
-		}
+		// .contactBox {
+		// }
+		// .skillsBox {
+		// 	ul {
+		// 	}
+		// }
 		.volunteerBox {
 			div {
 				p {
@@ -189,8 +188,8 @@ p {
 				}
 			}
 		}
-		.workBox {
-		}
+		// .workBox {
+		// }
 		.educationBox {
 			.data {
 				p {
@@ -198,5 +197,12 @@ p {
 				}
 			}
 		}
+	}
+}
+
+@media print {
+	#footer,
+	#header {
+		display: none !important;
 	}
 }
