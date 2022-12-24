@@ -1,4 +1,6 @@
 :root {
+		--mainHeight: 1120px;
+		--headHeight: 200px;
 		--fs-35: 60px;
 		--fs-29: calc(var(--fs-35) / 1.2);
 		--fs-14: calc(var(--fs-35) / 2.5);
@@ -49,13 +51,15 @@ p {
 }
 
 .headerOuterWrapper {
-		height: 200px;
+		min-height: var(--headHeight);
 		width: 100%;
+		position: relative;
 }
 .headerOuterWrapper .headerInnerWrapper {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		position: absolute;
 		width: 100%;
 		height: 100%;
 		background: var(--primary-100);
@@ -75,6 +79,8 @@ p {
 		-webkit-box-pack: center;
 		    -ms-flex-pack: center;
 		        justify-content: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
 }
 .headerOuterWrapper .headerInnerWrapper .resume-rhs h1,
 .headerOuterWrapper .headerInnerWrapper .resume-rhs h2 {
@@ -93,6 +99,7 @@ p {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
+		min-height: calc(var(--mainHeight) - var(--headHeight));
 }
 .contentWrapper .resume-lhs,
 .contentWrapper .resume-rhs {
@@ -100,6 +107,7 @@ p {
 }
 .contentWrapper .resume-lhs .box,
 .contentWrapper .resume-rhs .box {
+		word-wrap: break-word;
 		padding-top: 50px;
 }
 .contentWrapper .resume-lhs .box:last-child,
@@ -184,6 +192,7 @@ p {
 }
 .contentWrapper .resume-rhs .box > div .logo > span {
 		font-size: var(--fs-29);
+		color: var(--primary-100);
 }
 .contentWrapper .resume-rhs .box > div .data p:not(:first-child) {
 		padding-top: 50px;
@@ -193,5 +202,8 @@ p {
 		text-transform: capitalize;
 }
 .contentWrapper .resume-rhs .box > div .data li {
+		text-transform: capitalize;
+}
+.contentWrapper .resume-rhs .educationBox .data p {
 		text-transform: capitalize;
 }

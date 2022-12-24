@@ -1,4 +1,6 @@
 :root {
+	--mainHeight: 1120px;
+	--headHeight: 200px;
 	--fs-35: 60px;
 	--fs-29: calc(var(--fs-35) / 1.2);
 	--fs-14: calc(var(--fs-35) / 2.5);
@@ -55,10 +57,12 @@ p {
 }
 
 .headerOuterWrapper {
-	height: 200px;
+	min-height: var(--headHeight);
 	width: 100%;
+	position: relative;
 	.headerInnerWrapper {
 		display: flex;
+		position: absolute;
 		width: 100%;
 		height: 100%;
 		background: var(--primary-100);
@@ -70,6 +74,8 @@ p {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			padding-top: 20px;
+			padding-bottom: 20px;
 			h1,
 			h2 {
 				text-transform: capitalize;
@@ -88,10 +94,12 @@ p {
 
 .contentWrapper {
 	display: flex;
+	min-height: calc(var(--mainHeight) - var(--headHeight));
 	.resume-lhs,
 	.resume-rhs {
 		padding: 0 80px;
 		.box {
+			word-wrap: break-word;
 			padding-top: 50px;
 			&:last-child {
 				padding-bottom: 50px;
@@ -158,9 +166,11 @@ p {
 					margin-right: 30px;
 					> span {
 						font-size: var(--fs-29);
+						color: var(--primary-100);
 					}
 				}
 				.data {
+					// word-wrap: break-word;
 					p {
 						&:not(:first-child) {
 							padding-top: 50px;
@@ -182,6 +192,11 @@ p {
 		.workBox {
 		}
 		.educationBox {
+			.data {
+				p {
+					text-transform: capitalize;
+				}
+			}
 		}
 	}
 }
