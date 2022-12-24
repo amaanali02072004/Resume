@@ -1,10 +1,10 @@
 :root {
 		--mainHeight: 1120px;
 		--headHeight: 200px;
-		--fs-35: 50px;
+		--fs-35: 55px;
 		--fs-29: calc(var(--fs-35) / 1.2);
 		--fs-14: calc(var(--fs-35) / 2.5);
-		--fs-12: calc(var(--fs-35) / 2.9);
+		--fs-12: calc(var(--fs-35) / 2.5);
 		--fs-11: calc(var(--fs-35) / 3.18);
 		--ff-ibm: "IBM Plex Serif", serif;
 		--ff-arimo: "Arimo", sans-serif;
@@ -15,6 +15,31 @@
 		--rhsWidth: calc(100% - var(--lhsWidth));
 }
 
+@media print {
+		:root {
+				--fs-35: 40px;
+				--headHeight: 180px;
+		}
+		html,
+body {
+				width: 210mm;
+				height: 297mm;
+		}
+		.resume-lhs,
+.resume-rhs {
+				padding-left: 50px !important;
+				padding-right: 50px !important;
+		}
+		.resume-rhs > .box:not(:first-child) {
+				padding-top: 20px !important;
+		}
+		.unhide {
+				display: block !important;
+		}
+		.hide {
+				display: none;
+		}
+}
 *,
 *:after,
 *:before {
@@ -41,6 +66,16 @@ p {
 		font-weight: 300;
 }
 
+.unhide {
+		display: none;
+}
+
+.container {
+		max-width: 1336px;
+		width: 100%;
+		margin: 0 auto;
+}
+
 .resume-lhs {
 		width: var(--lhsWidth);
 }
@@ -51,22 +86,46 @@ p {
 }
 
 .headerOuterWrapper {
-		min-height: var(--headHeight);
+		height: var(--headHeight);
 		width: 100%;
 		position: relative;
 }
+.headerOuterWrapper::before {
+		content: "";
+		position: absolute;
+		width: calc(var(--rhsWidth) - 100px);
+		height: 100%;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		background: var(--primary-100);
+}
+.headerOuterWrapper > .container {
+		height: 100%;
+}
 .headerOuterWrapper .headerInnerWrapper {
+		background: var(--primary-100);
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: var(--primary-100);
 }
 .headerOuterWrapper .headerInnerWrapper .resume-lhs {
+		--bg: #1b75c5;
+		--bg: var(--primary);
 		height: 100%;
-		background: white;
+		background: var(--bg);
+}
+.headerOuterWrapper .headerInnerWrapper .resume-lhs::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 50%;
+		background: var(--bg);
+		z-index: -1;
 }
 .headerOuterWrapper .headerInnerWrapper .resume-rhs {
 		display: -webkit-box;
@@ -100,64 +159,111 @@ p {
 		display: -ms-flexbox;
 		display: flex;
 		min-height: calc(var(--mainHeight) - var(--headHeight));
+		position: relative;
 }
-.contentWrapper .resume-lhs,
-.contentWrapper .resume-rhs {
+.contentWrapper::before {
+		content: "";
+		position: absolute;
+		width: calc(var(--lhsWidth) - 100px);
+		height: 100%;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		background: var(--lhsBg);
+}
+.contentWrapper .contentInnerWrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		height: 100%;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs,
+.contentWrapper .contentInnerWrapper .resume-rhs {
+		height: 100%;
 		padding: 0 80px;
 }
-.contentWrapper .resume-lhs .box,
-.contentWrapper .resume-rhs .box {
+.contentWrapper .contentInnerWrapper .resume-lhs .box,
+.contentWrapper .contentInnerWrapper .resume-rhs .box {
 		word-wrap: break-word;
 		padding-top: 50px;
 }
-.contentWrapper .resume-lhs .box:last-child,
-.contentWrapper .resume-rhs .box:last-child {
+.contentWrapper .contentInnerWrapper .resume-lhs .box:last-child,
+.contentWrapper .contentInnerWrapper .resume-rhs .box:last-child {
 		padding-bottom: 50px;
 }
-.contentWrapper .resume-lhs .box h3,
-.contentWrapper .resume-rhs .box h3 {
+.contentWrapper .contentInnerWrapper .resume-lhs .box h3,
+.contentWrapper .contentInnerWrapper .resume-rhs .box h3 {
 		text-transform: capitalize;
 		font-size: var(--fs-12);
 		color: var(--primary-100);
 }
-.contentWrapper .resume-lhs .box ul,
-.contentWrapper .resume-lhs .box > div,
-.contentWrapper .resume-rhs .box ul,
-.contentWrapper .resume-rhs .box > div {
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div {
 		padding-top: 20px;
 }
-.contentWrapper .resume-lhs .box ul li,
-.contentWrapper .resume-lhs .box ul a,
-.contentWrapper .resume-lhs .box ul p,
-.contentWrapper .resume-lhs .box > div li,
-.contentWrapper .resume-lhs .box > div a,
-.contentWrapper .resume-lhs .box > div p,
-.contentWrapper .resume-rhs .box ul li,
-.contentWrapper .resume-rhs .box ul a,
-.contentWrapper .resume-rhs .box ul p,
-.contentWrapper .resume-rhs .box > div li,
-.contentWrapper .resume-rhs .box > div a,
-.contentWrapper .resume-rhs .box > div p {
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul > p,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div > p,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul > p,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div > p {
+		text-transform: capitalize;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul > p::first-line,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div > p::first-line,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul > p::first-line,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div > p::first-line {
+		font-weight: bold;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul > span,
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul li,
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul a,
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul p,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div > span,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div li,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div a,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div p,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul li,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul a,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul p,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div li,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div a,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div p {
 		font-size: var(--fs-11);
 		color: var(--primary-200);
 		font-weight: 300;
 }
-.contentWrapper .resume-lhs .box ul a,
-.contentWrapper .resume-lhs .box > div a,
-.contentWrapper .resume-rhs .box ul a,
-.contentWrapper .resume-rhs .box > div a {
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul > span,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div > span {
+		text-transform: capitalize;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul a,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div a,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul a,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div a {
 		text-decoration: none;
 }
-.contentWrapper .resume-lhs .box ul,
-.contentWrapper .resume-rhs .box ul {
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul a > span,
+.contentWrapper .contentInnerWrapper .resume-lhs .box > div a > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul a > span,
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div a > span {
+		text-transform: none;
+		color: blue;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul,
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul {
 		padding-left: 40px;
 		text-transform: capitalize;
 }
-.contentWrapper .resume-lhs .box ul > li:not(:last-child),
-.contentWrapper .resume-rhs .box ul > li:not(:last-child) {
+.contentWrapper .contentInnerWrapper .resume-lhs .box ul > li:not(:last-child),
+.contentWrapper .contentInnerWrapper .resume-rhs .box ul > li:not(:last-child) {
 		padding-bottom: 3px;
 }
-.contentWrapper .resume-lhs {
+.contentWrapper .contentInnerWrapper .resume-lhs {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -167,21 +273,26 @@ p {
 		        flex-direction: column;
 		background: var(--lhsBg);
 }
-.contentWrapper .resume-lhs .volunteerBox div p {
-		text-transform: capitalize;
+.contentWrapper .contentInnerWrapper .resume-rhs .grid {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
 }
-.contentWrapper .resume-lhs .volunteerBox div p::first-line {
-		font-weight: bold;
+.contentWrapper .contentInnerWrapper .resume-rhs .grid > div {
+		width: 48%;
+		padding-top: 20px !important;
 }
-.contentWrapper .resume-rhs {
-		background: white;
-}
-.contentWrapper .resume-rhs .box > div {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 }
-.contentWrapper .resume-rhs .box > div .logo {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div .logo {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -190,27 +301,20 @@ p {
 		        justify-content: center;
 		margin-right: 30px;
 }
-.contentWrapper .resume-rhs .box > div .logo > span {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div .logo > span {
 		font-size: var(--fs-29);
 		color: var(--primary-100);
 }
-.contentWrapper .resume-rhs .box > div .data p:not(:first-child) {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div .data p:not(:first-child) {
 		padding-top: 50px;
 }
-.contentWrapper .resume-rhs .box > div .data p::first-line {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div .data p::first-line {
 		font-weight: bold;
 		text-transform: capitalize;
 }
-.contentWrapper .resume-rhs .box > div .data li {
+.contentWrapper .contentInnerWrapper .resume-rhs .box > div .data li {
 		text-transform: capitalize;
 }
-.contentWrapper .resume-rhs .educationBox .data p {
+.contentWrapper .contentInnerWrapper .resume-rhs .educationBox .data p {
 		text-transform: capitalize;
-}
-
-@media print {
-		#footer,
-#header {
-				display: none !important;
-		}
 }
