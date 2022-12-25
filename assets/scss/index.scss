@@ -16,6 +16,11 @@
 	--rhsWidth: calc(100% - var(--lhsWidth));
 }
 
+@page {
+	size: A4;
+	margin: 0;
+}
+
 @media print {
 	:root {
 		--fs-35: 40px;
@@ -80,6 +85,10 @@ p {
 	display: none;
 }
 
+#footer{
+	display: none;
+}
+
 .container {
 	// max-width: 1280px;
 	max-width: 1336px;
@@ -101,6 +110,7 @@ p {
 	height: var(--headHeight);
 	width: 100%;
 	position: relative;
+	background: var(--primary-100);
 	&::before {
 		content: '';
 		position: absolute;
@@ -115,14 +125,13 @@ p {
 		height: 100%;
 	}
 	.headerInnerWrapper {
-		background: var(--primary-100);
 		display: flex;
 		// position: absolute;
 		width: 100%;
 		height: 100%;
 		.resume-lhs {
-			--bg: #1b75c5;
-			--bg: var(--primary);
+			// --bg: var(--primary);
+			--bg: #1792ff;
 			height: 100%;
 			background: var(--bg);
 			&::before {
@@ -131,9 +140,9 @@ p {
 				top: 0;
 				left: 0;
 				height: 100%;
-				width: 50%;
+				width: 10%;
 				background: var(--bg);
-				z-index: -1;
+				z-index: 0;
 			}
 		}
 		.resume-rhs {
@@ -142,6 +151,7 @@ p {
 			justify-content: center;
 			padding-top: 20px;
 			padding-bottom: 20px;
+			z-index: 1;
 			h1,
 			h2 {
 				text-transform: capitalize;
