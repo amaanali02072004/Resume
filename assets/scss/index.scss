@@ -191,10 +191,13 @@ p {
 			padding: 0 80px;
 			.box {
 				word-wrap: break-word;
-				padding-top: 50px;
-				&:last-child {
-					padding-bottom: 50px;
+				padding-bottom: 50px;
+				&:first-child {
+					padding-top: 50px;
 				}
+				// &:last-child {
+				// 	padding-bottom: 0;
+				// }
 				h3 {
 					text-transform: capitalize;
 					font-size: var(--fs-12);

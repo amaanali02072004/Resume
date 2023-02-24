@@ -193,11 +193,11 @@ p {
 .contentWrapper .contentInnerWrapper .resume-lhs .box,
 .contentWrapper .contentInnerWrapper .resume-rhs .box {
 		word-wrap: break-word;
-		padding-top: 50px;
-}
-.contentWrapper .contentInnerWrapper .resume-lhs .box:last-child,
-.contentWrapper .contentInnerWrapper .resume-rhs .box:last-child {
 		padding-bottom: 50px;
+}
+.contentWrapper .contentInnerWrapper .resume-lhs .box:first-child,
+.contentWrapper .contentInnerWrapper .resume-rhs .box:first-child {
+		padding-top: 50px;
 }
 .contentWrapper .contentInnerWrapper .resume-lhs .box h3,
 .contentWrapper .contentInnerWrapper .resume-rhs .box h3 {
