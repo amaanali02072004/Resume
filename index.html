@@ -14,6 +14,21 @@
     @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
   </style>
+  <script>
+    console.log('Console ~ file: index.html:19 ~ window:', window?.location?.hash)
+    let localType = window?.location?.hash.slice(1, 1000) || document.body?.getAttribute('type') || 'developer'
+
+    let deletedArray = []
+
+    for (let i = 0; i < 100; i++) {
+      deletedArray[i] = `[${localType}]`
+    }
+    setTimeout(() => {
+      for (let i = 0; i < deletedArray.length; i++) {
+        document.querySelector(deletedArray[i])?.remove()
+      }
+    }, 100)
+  </script>
 </head>
 
 <body page="resume">
@@ -23,7 +38,7 @@
         <div class="resume-lhs"></div>
         <div class="resume-rhs">
           <h1>amaan ali</h1>
-          <h2>frontend developer</h2>
+          <h2 data>frontend developer</h2>
         </div>
       </div>
     </div>
@@ -38,19 +53,33 @@
             <div>
               <span>email: </span><a href="mailto:killeramaan12345@gmail.com"
                 target="_blank">killeramaan12345@gmail.com</a><br>
-              <span>phone: </span><a href="tel:+919321499440" target="_blank">+91 9321499440</a>
+              <span>phone: </span><a href="tel:+919321499440" target="_blank">+91 9321499440</a><br>
+              <span>address: </span><a href="javascript:;" target="_blank">Dahisar</a>
               <!-- <a href="https://the-fox.netlify.app" target="_blank">the-fox.netlify.app</a> -->
             </div>
           </div>
           <div class="skillsBox box">
             <h3>skills</h3>
             <ul>
-              <li>NodeJS, MongoDB, ReactJS, react hooks, javaScript, postman, HTML, CSS, JSX, Pug, SCSS, TailwindCSS, Jquery</li>
+              <li data>NodeJS, MongoDB, ReactJS, react hooks, javaScript, postman, HTML, CSS, JSX, Pug, SCSS,
+                TailwindCSS,
+                Jquery</li>
+              <li developer>MS Word, MS PowerPoint, MS Excel</li>
               <li>photoshop, premiere pro, after effects</li>
               <li>blender, 3d builder</li>
             </ul>
           </div>
-          <div class="projectsBox box" id="projectsBox">
+          <div class="skillsBox box" developer>
+            <h3>hobbies</h3>
+            <ul>
+              <li>Listening Music/ watching movies.</li>
+              <li>Reading.</li>
+              <li>Exploring new things in Graphics.</li>
+              <li>Playing video games, Chess.</li>
+              <li>Cycling</li>
+            </ul>
+          </div>
+          <div class="projectsBox box" id="projectsBox" data>
             <h3>projects</h3>
             <div>
               <p>prodige digital</p>
@@ -147,7 +176,7 @@
               <ul id="personalProjects"></ul>
             </div>
           </div>
-          <div class="volunteerBox box hide" hidden>
+          <div class="volunteerBox box hide" data hidden>
             <h3>volunteer work and interests</h3>
             <div>
               <p>
@@ -165,109 +194,127 @@
           </div>
         </div>
         <div class="resume-rhs">
-          <div class="workBox box">
-            <h3>work experience</h3>
+          <div class="workBox box" developer>
+            <h3>skills</h3>
             <div>
               <div class="logo hide">
                 <span class="material-symbols-outlined">
-                  work_history
+                  neurology
                 </span>
               </div>
               <div class="data">
                 <p>
-                  junior frontend developer <br>
-                  Prodige Digital Pvt. Ltd, a global company <br>
-                  that provides software services across <br>
-                  various industries <br>
-                  July 2022 to December 2022 (6 months)
+                  data entry <br>
+                  fast with typing <br>
                 </p>
-                <ul>
-                  <li>
-                    Maintained a 100% customer satisfaction rating by developing and implementing software solutions
-                    based
-                    on client requirements
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
-
-          <div class="grid">
+          <div data>
             <div class="workBox box">
-
+              <h3>work experience</h3>
               <div>
+                <div class="logo hide">
+                  <span class="material-symbols-outlined">
+                    work_history
+                  </span>
+                </div>
                 <div class="data">
-
                   <p>
                     junior frontend developer <br>
-                    Apphubs (freelance)<br>
-                    2019
+                    Prodige Digital Pvt. Ltd, a global company <br>
+                    that provides software services across <br>
+                    various industries <br>
+                    July 2022 to December 2022 (6 months)
                   </p>
                   <ul>
                     <li>
-                      Worked on React Projects in UI development & some coding.
-                    </li>
-                    <li>
-                      Htmlization of web templates using HTML5 & CSS3.
-                    </li>
-                    <li>
-                      Account's Software Bug testing / Full flow testing.
+                      Maintained a 100% customer satisfaction rating by developing and implementing software solutions
+                      based
+                      on client requirements
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="workBox box">
 
-              <div>
-                <div class="data">
-                  <p>
-                    graphic designing <br>
-                    Quantum Marketing (freelance)<br>
-                    2019
-                  </p>
-                  <ul>
-                    <li>
-                      Graphical designing (Brochures, Logos, Banners, Pamphlets).
-                    </li>
-                    <li>
-                      Video Editing, Creating PowerPoint presentations.
-                    </li>
-                  </ul>
+            <div class="grid">
+              <div class="workBox box">
+
+                <div>
+                  <div class="data">
+
+                    <p>
+                      junior frontend developer <br>
+                      Apphubs (freelance)<br>
+                      2019
+                    </p>
+                    <ul>
+                      <li>
+                        Worked on React Projects in UI development & some coding.
+                      </li>
+                      <li>
+                        Htmlization of web templates using HTML5 & CSS3.
+                      </li>
+                      <li>
+                        Account's Software Bug testing / Full flow testing.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="workBox box">
+              <div class="workBox box">
 
-              <div>
-                <div class="data">
-                  <p>
-                    video editor <br>
-                    City Link Tours & Travels (freelance)<br>
-                    2019
-                  </p>
-                  <ul>
-                    <li>
-                      Video Editing, Brochures, Advertisements
-                    </li>
-                  </ul>
+                <div>
+                  <div class="data">
+                    <p>
+                      graphic designing <br>
+                      Quantum Marketing (freelance)<br>
+                      2019
+                    </p>
+                    <ul>
+                      <li>
+                        Graphical designing (Brochures, Logos, Banners, Pamphlets).
+                      </li>
+                      <li>
+                        Video Editing, Creating PowerPoint presentations.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="workBox box">
+              <div class="workBox box">
 
-              <div>
-                <div class="data">
-                  <p>
-                    3D modelling <br>
-                    New Look Interior (freelance)<br>
-                    2019
-                  </p>
-                  <ul>
-                    <li>
-                      3D Modelling.
-                    </li>
-                  </ul>
+                <div>
+                  <div class="data">
+                    <p>
+                      video editor <br>
+                      City Link Tours & Travels (freelance)<br>
+                      2019
+                    </p>
+                    <ul>
+                      <li>
+                        Video Editing, Brochures, Advertisements
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="workBox box">
+
+                <div>
+                  <div class="data">
+                    <p>
+                      3D modelling <br>
+                      New Look Interior (freelance)<br>
+                      2019
+                    </p>
+                    <ul>
+                      <li>
+                        3D Modelling.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,8 +347,8 @@
   </div>
   <script src="./assets/js/index.js"></script>
   <!-- Footer Component -->
-  <header class="hide" id="header" headerLinksProps=[{"title":"","href":""}] hidden></header>
-  <footer class="hide" id="footer" repoLink="https://github.com/Killer-Amaan-Ali/Resume/"></footer>
+  <header hidden class="hide" id="header" headerLinksProps=[{"title":"","href":""}]></header>
+  <footer hidden class="hide" id="footer" repoLink="https://github.com/Killer-Amaan-Ali/Resume/"></footer>
   <script src="https://the-fox.netlify.app/the-fox/assets/js/common.js"></script>
   <!-- Footer Component -->
 </body>
