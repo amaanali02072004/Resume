@@ -40,7 +40,7 @@
 	}
 
 	.resume-rhs {
-		> .box {
+		.box {
 			&:not(:first-child) {
 				padding-top: 20px !important;
 			}
@@ -52,7 +52,7 @@
 	}
 
 	.hide {
-		display: none;
+		display: none !important;
 	}
 }
 
@@ -81,13 +81,17 @@ p {
 	font-weight: 300;
 }
 
+[contenteditable]{
+border: 1px red solid;
+}
+
 .unhide {
 	display: none;
 }
 
-#footer{
-	display: none;
-}
+// #footer {
+// 	display: none;
+// }
 
 .container {
 	// max-width: 1280px;
