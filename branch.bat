@@ -11,7 +11,7 @@ git commit -m "%COM%"
 git push origin %BR%
 @REM ------
 git checkout main
-@REM explorer "https://bitbucket.org/sulaman/ats-react/pull-requests/new?source=%BR%&t=1"
+explorer "https://github.com/Killer-Amaan-Ali/Resume/pull/new/%BR%"
 git pull origin main
 
 setlocal
