@@ -102,42 +102,41 @@ header h2 {
 		display: -ms-flexbox;
 		display: flex;
 }
-.main .container .lhsWrapper,
-.main .container .rhsWrapper {
+.main .container .mainWrapper {
 		width: 50%;
 		padding: 25px 5px;
 }
-.main .container .lhsWrapper .cardWrapper,
-.main .container .rhsWrapper .cardWrapper {
-		margin-bottom: 60px;
+.main .container .mainWrapper:first-child {
+		padding-right: 40px;
 }
-.main .container .lhsWrapper .cardWrapper .card,
-.main .container .rhsWrapper .cardWrapper .card {
-		margin-bottom: 30px;
+.main .container .mainWrapper:last-child {
+		padding-left: 40px;
 }
-.main .container .lhsWrapper .cardWrapper .card h3.heading,
-.main .container .rhsWrapper .cardWrapper .card h3.heading {
+.main .container .mainWrapper .cardWrapper {
+		margin-bottom: 70px;
+}
+.main .container .mainWrapper .cardWrapper .card {
+		margin-bottom: 25px;
+}
+.main .container .mainWrapper .cardWrapper .card h3.heading {
 		font-size: 32px;
 		text-transform: uppercase;
 		color: var(--darkGrayFont);
 		font-family: var(--heading1Family);
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 }
-.main .container .lhsWrapper .cardWrapper .card h4.subheading,
-.main .container .rhsWrapper .cardWrapper .card h4.subheading {
+.main .container .mainWrapper .cardWrapper .card h4.subheading {
 		font-size: 25px;
 		text-transform: capitalize;
 		font-weight: 600;
 }
-.main .container .lhsWrapper .cardWrapper .card .subtitle,
-.main .container .rhsWrapper .cardWrapper .card .subtitle {
+.main .container .mainWrapper .cardWrapper .card .subtitle {
 		text-decoration: none;
 		color: inherit;
 		font-weight: 400;
 		font-size: 25px;
 }
-.main .container .lhsWrapper .cardWrapper .card .footer,
-.main .container .rhsWrapper .cardWrapper .card .footer {
+.main .container .mainWrapper .cardWrapper .card .footer {
 		width: 100%;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -146,40 +145,12 @@ header h2 {
 		    -ms-flex-pack: justify;
 		        justify-content: space-between;
 		color: var(--grayFont);
-		margin-top: 10px;
+		margin-top: 5px;
 }
-.main .container .lhsWrapper .cardWrapper .card .footer span,
-.main .container .rhsWrapper .cardWrapper .card .footer span {
+.main .container .mainWrapper .cardWrapper .card .footer span {
 		font-style: italic;
 }
-.main .container .lhsWrapper .cardWrapper .card .content,
-.main .container .rhsWrapper .cardWrapper .card .content {
-		margin-top: 10px;
-}
-.main .container .lhsWrapper .cardWrapper .card .content span,
-.main .container .rhsWrapper .cardWrapper .card .content span {
-		color: var(--grayFont);
-		font-style: italic;
-}
-.main .container .lhsWrapper .cardWrapper .card .content ul,
-.main .container .rhsWrapper .cardWrapper .card .content ul {
-		list-style: inside;
-		font-size: 18px;
-		font-weight: 500;
-}
-.main .container .lhsWrapper .cardWrapper .card .content ul li,
-.main .container .rhsWrapper .cardWrapper .card .content ul li {
-		color: var(--darkGrayFont);
-		line-height: 1.3;
-		font-weight: 500;
-}
-.main .container .lhsWrapper .cardWrapper {
-		padding-right: 40px;
-}
-.main .container .rhsWrapper .cardWrapper {
-		padding-left: 40px;
-}
-.main .container .rhsWrapper .skills ul {
+.main .container .mainWrapper .cardWrapper .card ul.button-list {
 		list-style: none;
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -188,7 +159,7 @@ header h2 {
 		    flex-wrap: wrap;
 		margin-top: 15px;
 }
-.main .container .rhsWrapper .skills ul li {
+.main .container .mainWrapper .cardWrapper .card ul.button-list li {
 		background-color: var(--grayButton);
 		font-family: var(--heading1Family);
 		color: white;
@@ -196,4 +167,27 @@ header h2 {
 		padding: 8px 18px;
 		margin: 0 12px 12px 0;
 		border-radius: 8px;
+}
+.main .container .mainWrapper .cardWrapper .card .content {
+		margin-top: 10px;
+}
+.main .container .mainWrapper .cardWrapper .card .content span {
+		color: var(--grayFont);
+		font-style: italic;
+}
+.main .container .mainWrapper .cardWrapper .card .content ul {
+		margin-top: 5px;
+		margin-left: 7px;
+		list-style: "-";
+		font-size: 18px;
+		font-weight: 500;
+}
+.main .container .mainWrapper .cardWrapper .card .content ul li {
+		padding-left: 13px;
+		color: var(--darkGrayFont);
+		line-height: 1.3;
+		font-weight: 500;
+}
+.main .container .mainWrapper .cardWrapper .card .content ul li::marker {
+		font-weight: 900;
 }
