@@ -5,6 +5,10 @@
 	--grayBg: #f1f1ef;
 	--grayButton: #9a9da6;
 	--darkGrayFont: #343b4e;
+	--h1FontSize: 52px;
+	--h2FontSize: 26px;
+	--h3FontSize: 32px;
+	--h4FontSize: 25px;
 }
 
 * {
@@ -33,13 +37,25 @@ body {
 	margin: auto;
 }
 
+@media only screen and (max-width: 1280px) {
+	.container {
+		max-width: 1000px;
+	}
+}
+
+// @media only screen and (max-width: 1000px) {
+// 	.container {
+// 		max-width: 960px;
+// 	}
+// }
+
 header {
 	width: 100%;
 	padding: 45px 5px;
 	h1 {
 		text-transform: uppercase;
 		font-family: var(--heading1Family);
-		font-size: 52px;
+		font-size: var(--h1FontSize);
 		font-weight: 500;
 		margin-bottom: 5px;
 	}
@@ -47,7 +63,20 @@ header {
 		text-transform: capitalize;
 		color: var(--grayFont);
 		font-family: var(--heading2Family);
-		font-size: 26px;
+		font-size: var(--h2FontSize);
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	header {
+		padding: 40px 5px;
+		h1 {
+			--h1FontSize: 45px;
+			margin-bottom: 5px;
+		}
+		h2 {
+			--h2FontSize: 20px;
+		}
 	}
 }
 
@@ -93,18 +122,39 @@ header {
 	}
 }
 
+@media only screen and (max-width: 1280px) {
+	.socialsOuterWrapper {
+		padding: 2.5px 0;
+		.socialsInnerWrapper {
+			padding: 7px 0;
+			ul {
+				li {
+					padding: 4px 0;
+					span {
+						margin: 0 6px;
+						font-size: 28px;
+					}
+					p,
+					a {
+						margin-left: 5px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
 .main {
 	width: 100%;
 	.container {
 		display: flex;
 		.mainWrapper {
-			// border: 1px red solid;
 			&:first-child {
 				padding-right: 40px;
 			}
 			&:last-child {
 				padding-left: 40px;
-				// padding-left: 20px;
 			}
 			width: 50%;
 			padding: 30px 5px;
@@ -114,14 +164,14 @@ header {
 					// border: 1px red solid;
 					margin-bottom: 25px;
 					h3.heading {
-						font-size: 32px;
+						font-size: var(--h3FontSize);
 						text-transform: uppercase;
 						color: var(--darkGrayFont);
 						font-family: var(--heading1Family);
 						margin-bottom: 18px;
 					}
 					h4.subheading {
-						font-size: 25px;
+						font-size: var(--h4FontSize);
 						text-transform: capitalize;
 						font-weight: 600;
 					}
@@ -194,6 +244,23 @@ header {
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+	.main {
+		.container {
+			.mainWrapper {
+				&:first-child {
+					padding-right: 40px;
+				}
+				&:last-child {
+					padding-left: 40px;
+				}
+				border: 1px red solid;
+				padding: 30px 5px;
 			}
 		}
 	}

@@ -5,6 +5,10 @@
 		--grayBg: #f1f1ef;
 		--grayButton: #9a9da6;
 		--darkGrayFont: #343b4e;
+		--h1FontSize: 52px;
+		--h2FontSize: 26px;
+		--h3FontSize: 32px;
+		--h4FontSize: 25px;
 }
 
 * {
@@ -32,6 +36,11 @@ body {
 		margin: auto;
 }
 
+@media only screen and (max-width: 1280px) {
+		.container {
+				max-width: 1000px;
+		}
+}
 header {
 		width: 100%;
 		padding: 45px 5px;
@@ -39,7 +48,7 @@ header {
 header h1 {
 		text-transform: uppercase;
 		font-family: var(--heading1Family);
-		font-size: 52px;
+		font-size: var(--h1FontSize);
 		font-weight: 500;
 		margin-bottom: 5px;
 }
@@ -47,9 +56,21 @@ header h2 {
 		text-transform: capitalize;
 		color: var(--grayFont);
 		font-family: var(--heading2Family);
-		font-size: 26px;
+		font-size: var(--h2FontSize);
 }
 
+@media only screen and (max-width: 1280px) {
+		header {
+				padding: 40px 5px;
+		}
+		header h1 {
+				--h1FontSize: 45px;
+				margin-bottom: 5px;
+		}
+		header h2 {
+				--h2FontSize: 20px;
+		}
+}
 .socialsOuterWrapper {
 		background-color: var(--grayBg);
 		padding: 3px 0;
@@ -99,6 +120,26 @@ header h2 {
 		font-weight: 500;
 }
 
+@media only screen and (max-width: 1280px) {
+		.socialsOuterWrapper {
+				padding: 2.5px 0;
+		}
+		.socialsOuterWrapper .socialsInnerWrapper {
+				padding: 7px 0;
+		}
+		.socialsOuterWrapper .socialsInnerWrapper ul li {
+				padding: 4px 0;
+		}
+		.socialsOuterWrapper .socialsInnerWrapper ul li span {
+				margin: 0 6px;
+				font-size: 28px;
+		}
+		.socialsOuterWrapper .socialsInnerWrapper ul li p,
+		.socialsOuterWrapper .socialsInnerWrapper ul li a {
+				margin-left: 5px;
+				font-size: 16px;
+		}
+}
 .main {
 		width: 100%;
 }
@@ -124,14 +165,14 @@ header h2 {
 		margin-bottom: 25px;
 }
 .main .container .mainWrapper .cardWrapper .card h3.heading {
-		font-size: 32px;
+		font-size: var(--h3FontSize);
 		text-transform: uppercase;
 		color: var(--darkGrayFont);
 		font-family: var(--heading1Family);
 		margin-bottom: 18px;
 }
 .main .container .mainWrapper .cardWrapper .card h4.subheading {
-		font-size: 25px;
+		font-size: var(--h4FontSize);
 		text-transform: capitalize;
 		font-weight: 600;
 }
@@ -208,4 +249,17 @@ header h2 {
 }
 .main .container .mainWrapper .cardWrapper .card .content .bold {
 		font-weight: 900;
+}
+
+@media only screen and (max-width: 1280px) {
+		.main .container .mainWrapper {
+				border: 1px red solid;
+				padding: 30px 5px;
+		}
+		.main .container .mainWrapper:first-child {
+				padding-right: 40px;
+		}
+		.main .container .mainWrapper:last-child {
+				padding-left: 40px;
+		}
 }
