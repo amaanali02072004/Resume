@@ -11,6 +11,8 @@
 		margin: 0;
 		padding: 0;
 		border: none;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
 		font-family: var(--heading1Family);
 }
 
@@ -78,6 +80,9 @@ header h2 {
 		color: var(--darkGrayFont);
 		font-family: var(--heading1Family);
 }
+.socialsOuterWrapper .socialsInnerWrapper ul li:nth-child(even) {
+		padding-left: 40px;
+}
 .socialsOuterWrapper .socialsInnerWrapper ul li.capitalize {
 		text-transform: capitalize;
 }
@@ -104,7 +109,7 @@ header h2 {
 }
 .main .container .mainWrapper {
 		width: 50%;
-		padding: 25px 5px;
+		padding: 30px 5px;
 }
 .main .container .mainWrapper:first-child {
 		padding-right: 40px;
@@ -123,7 +128,7 @@ header h2 {
 		text-transform: uppercase;
 		color: var(--darkGrayFont);
 		font-family: var(--heading1Family);
-		margin-bottom: 15px;
+		margin-bottom: 18px;
 }
 .main .container .mainWrapper .cardWrapper .card h4.subheading {
 		font-size: 25px;
@@ -135,6 +140,9 @@ header h2 {
 		color: inherit;
 		font-weight: 400;
 		font-size: 25px;
+}
+.main .container .mainWrapper .cardWrapper .card > p {
+		text-transform: capitalize;
 }
 .main .container .mainWrapper .cardWrapper .card .footer {
 		width: 100%;
@@ -171,7 +179,7 @@ header h2 {
 .main .container .mainWrapper .cardWrapper .card .content {
 		margin-top: 10px;
 }
-.main .container .mainWrapper .cardWrapper .card .content span {
+.main .container .mainWrapper .cardWrapper .card .content > span {
 		color: var(--grayFont);
 		font-style: italic;
 }
@@ -189,5 +197,15 @@ header h2 {
 		font-weight: 500;
 }
 .main .container .mainWrapper .cardWrapper .card .content ul li::marker {
+		font-weight: 900;
+}
+.main .container .mainWrapper .cardWrapper .card .content ul li a {
+		color: rgb(78, 196, 196);
+}
+.main .container .mainWrapper .cardWrapper .card .content p {
+		font-weight: 500;
+		font-size: 20px;
+}
+.main .container .mainWrapper .cardWrapper .card .content .bold {
 		font-weight: 900;
 }
