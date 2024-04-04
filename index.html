@@ -3,356 +3,270 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/index2.css">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <!-- FONT -->
+  <!-- ICON -->
+  <script src="https://kit.fontawesome.com/3aaa38a1ba.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
-
-  </style>
-  <script>
-    console.log('Console ~ file: index.html:19 ~ window:', window?.location?.hash)
-    let localType = window?.location?.hash.slice(1, 1000) || document.body?.getAttribute('type') || 'developer'
-
-    let deletedArray = []
-
-    for (let i = 0; i < 100; i++) {
-      deletedArray[i] = `[${localType}]`
-    }
-    setTimeout(() => {
-      for (let i = 0; i < deletedArray.length; i++) {
-        document.querySelector(deletedArray[i])?.remove()
-      }
-    }, 100)
-  </script>
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- ICON -->
 </head>
 
-<body page="resume">
-  <div class="headerOuterWrapper">
+<body>
+  <header>
     <div class="container">
-      <div class="headerInnerWrapper">
-        <div class="resume-lhs"></div>
-        <div class="resume-rhs">
-          <h1>amaan ali</h1>
-          <h2 data>frontend developer</h2>
-        </div>
+      <h1>Amaan Ali</h1>
+      <h2>software engineer</h2>
+    </div>
+  </header>
+  <section class="socialsOuterWrapper">
+    <div class="container">
+      <div class="socialsInnerWrapper">
+        <ul>
+          <li>
+            <span class="material-symbols-outlined ">
+              mail
+            </span>
+            <a target="_blank" href="mailto:killeramaan12345@gmail.com">killeramaan12345@gmail.com</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              phone_iphone
+            </span>
+            <a target="_blank" href="tel:+9321499440">+91-9321499440</a>
+          </li>
+          <li>
+            <span class="material-symbols-outlined">
+              location_on
+            </span>
+            <p>Mumbai, Maharashtra</p>
+          </li>
+          <li>
+            <span class="fa-brands fa-linkedin-in">
+            </span>
+            <a target="_blank"
+              href="https://www.linkedin.com/in/amaan--ali/">https://www.linkedin.com/in/amaan--ali/</a>
+          </li>
+          <li>
+            <span class="fa-brands fa-github">
+            </span>
+            <a target="_blank" href="https://github.com/Killer-Amaan-Ali/">https://github.com/Killer-Amaan-Ali/</a>
+          </li>
+        </ul>
       </div>
     </div>
-  </div>
-
-  <div class="contentWrapper">
+  </section>
+  <section class="main">
     <div class="container">
-      <div class="contentInnerWrapper">
-        <div class="resume-lhs">
-          <div class="contactBox box">
-            <h3>contact me</h3>
-            <div>
-              <span>email: <a href="mailto:killeramaan12345@gmail.com" target="_blank">
-                killeramaan12345@gmail.com
-              </a><br></span>
-              <span>phone: <a href="tel:+919321499440" target="_blank">
-                +91 9321499440
-              </a><br></span>
-              <span developer>DOB: <a href="javascript:;">02/07/2004</a><br></span>
-              <span developer>address: <a href="javascript:;" style="text-transform: capitalize;">
-                DB ozone, bld no 22, flat no 1808, near thakur mall, Mira Rd
-              </a></span>
-              <!-- <a href="https://the-fox.netlify.app" target="_blank">the-fox.netlify.app</a> -->
-            </div>
-          </div>
-          <div class="skillsBox box">
-            <h3>skills</h3>
-            <ul>
-              <li data>
-                Angular, NodeJS, MongoDB, ReactJS, react hooks, JavaScript, postman, HTML, CSS, JSX, Pug, SCSS,
-                TailwindCSS,
-                Jquery</li>
-              <li developer>MS Word, MS PowerPoint, MS Excel</li>
-              <li>photoshop, premiere pro, after effects</li>
-              <li>blender, 3d builder</li>
-            </ul>
-          </div>
-          <div class="skillsBox box" developer>
-            <h3>hobbies</h3>
-            <ul>
-              <li>Listening Music/ watching movies.</li>
-              <li>Reading.</li>
-              <li>Exploring new things in Graphics.</li>
-              <li>Playing video games, Chess.</li>
-              <li>Cycling</li>
-            </ul>
-          </div>
-          <div class="projectsBox box" id="projectsBox" data>
-            <h3>projects</h3>
-            <div>
-              <p>prodige digital</p>
-              <ul>
-                <li>
-                  <a href="https://bit.ly/3vgcetC" target="_blank">
-                    podar
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3hJHWwd" target="_blank">
-                    tata
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3PP3iEW" target="_blank">
-                    canon
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3PTkkS4" target="_blank">
-                    icici
-                  </a>
-                </li>
-                <!-- <li>
-                  <a href="https://pd-poc.netlify.app" target="_blank">
-                    pd-poc
-                  </a>
-                </li> -->
-              </ul>
-            </div>
-            <div>
-              <p>quantum marketing</p>
-              <ul>
-                <li>
-                  <a href="https://bit.ly/3yo4wjT" target="_blank">
-                    GC logo animation
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3FpzhpR" target="_blank">
-                    Quantum & GC
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3kHKZ5Q" target="_blank">
-                    Logos
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="hide">
-              <p>citylink tours & travels</p>
-              <ul>
-                <li>
-                  <a href="https://bit.ly/3yfjhFl" target="_blank">
-                    reel animation
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/39HCCVE" target="_blank">
-                    banner
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3P4oR3y" target="_blank">
-                    Explore ad
-                  </a>
-                </li>
-                <!-- <li>
-                  <a href="https://bit.ly/3vMu2gU" target="_blank">
-                    City Link & GC
-                  </a>
-                </li> -->
-              </ul>
-            </div>
-            <div class="hide">
-              <p>New Look Interior</p>
-              <ul>
-                <li>
-                  <a href="https://bit.ly/3ykyEww" target="_blank">
-                    3D interior model
-                  </a>
-                </li>
-                <li>
-                  <a href="https://bit.ly/3yz8Lcv" target="_blank">
-                    3D interior model
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div style="display: none;" class="unprint">
-              <p>personal projects</p>
-              <ul id="personalProjects"></ul>
-            </div>
-          </div>
-          <div class="volunteerBox box hide" data hidden>
-            <h3>volunteer work and interests</h3>
-            <div>
-              <p>
-                volunteer math teacher <br>
-                lily river children's <br>
-                foundation</p>
-            </div>
-            <div>
-              <p>
-                Member,<br>
-                Coding Masters Club,<br>
-                Roseton Chapter
-              </p>
+      <div class="lhsWrapper mainWrapper">
+
+        <div class="education cardWrapper">
+          <div class="card">
+            <h3 class="heading">education</h3>
+            <h4 class="subheading">Bachelor Of Science In Information Technology</h4>
+            <p class="subtitle">Reena Mehta College - Mumbai, Maharashtra</p>
+            <div class="footer">
+              <span>2023 - 2026</span>
+              <!-- <span>9.11 CGPA</span> -->
             </div>
           </div>
         </div>
-        <div class="resume-rhs">
-          <div class="workBox box">
-            <h3>work experience</h3>
-            <div>
-              <div class="logo hide">
-                <span class="material-symbols-outlined">
-                  work_history
-                </span>
-              </div>
-              <div class="data" data>
-                <p>
-                  junior frontend developer <br>
-                  Prodige Digital Pvt. Ltd, a global company <br>
-                  that provides software services across <br>
-                  various industries <br>
-                  July 2022 to December 2022 (6 months)
-                </p>
-                <ul>
-                  <li>
-                    Maintained a 100% customer satisfaction rating by developing and implementing software solutions
-                    based
-                    on client requirements
-                  </li>
-                </ul>
-              </div>
-              <div class="data" developer>
-                <p>
-                  fresher
-                </p>
-              </div>
+
+        <div class="work cardWrapper">
+          <div class="card">
+            <h3 class="heading">work experience</h3>
+            <h4 class="subheading">freelance</h4>
+            <p class="subtitle">Applicant tracking system - ATS</p>
+            <p>Frontend Developer</p>
+            <div class="footer">
+              <span>2023</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>Developed an innovative Applicant Tracking System (ATS) designed to streamline
+                  the recruitment process by automating administrative tasks and enhancing candidate experience.</li>
+                <li>
+                  Automated Recruitment Workflow: Implemented features for job posting management, application tracking,
+                  and candidate
+                  communication, significantly reducing time-to-hire.
+                </li>
+                <li>
+                  Candidate Sourcing & Evaluation: Engineered advanced algorithms to attract, source, interview, and
+                  evaluate candidates
+                  efficiently, ensuring a high-quality talent pool.
+                </li>
+                <!-- User-Centric Design: Focused on a user-friendly interface that allows HR teams to manage recruitment activities with
+ease and flexibility.
+Integration & Compatibility: Ensured seamless integration with various HR tools and platforms, enhancing the system’s
+utility and adaptability.
+Data-Driven Insights: Incorporated analytics to provide actionable insights into the hiring process, enabling
+data-driven decision-making for recruiters. -->
+              </ul>
             </div>
           </div>
-
-          <div data>
-            <div class="grid">
-              <div class="workBox box">
-
-                <div>
-                  <div class="data">
-
-                    <p>
-                      junior frontend developer <br>
-                      Apphubs (freelance)<br>
-                      2019
-                    </p>
-                    <ul>
-                      <li>
-                        Worked on   Accounting software modules, like sales, purchase, payments, etc.  Developed basic and common components of some of the sections of the Application.
-                      </li>
-                      <li>
-                        Worked on React & Angular Projects in UI development & some coding.
-                      </li>
-
-                        Htmlization of web templates using HTML5 & CSS3.
-
-                      <li>
-
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="workBox box">
-
-                <div>
-                  <div class="data">
-                    <p>
-                      graphic designing <br>
-                      Quantum Marketing (freelance)<br>
-                      2019
-                    </p>
-                    <ul>
-                      <li>
-                        Graphical designing (Brochures, Logos, Banners, Pamphlets).
-                      </li>
-                      <li>
-                        Video Editing, Creating PowerPoint presentations.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="workBox box">
-
-                <div>
-                  <div class="data">
-                    <p>
-                      video editor <br>
-                      City Link Tours & Travels (freelance)<br>
-                      2019
-                    </p>
-                    <ul class="unprint">
-                      <li>
-                        Video Editing, Brochures, Advertisements
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="workBox box">
-
-                <div>
-                  <div class="data">
-                    <p>
-                      3D modelling <br>
-                      New Look Interior (freelance)<br>
-                      2019
-                    </p>
-                    <ul>
-                      <li>
-                        3D Modelling.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          <div class="card">
+            <h4 class="subheading">junior frontend developer</h4>
+            <p class="subtitle">Prodige Digital Pvt. Ltd</p>
+            <div class="footer">
+              <span>07/2022 - 12/2022</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>Maintained A 100% Customer Satisfaction Rating By Developing And Implementing Software Solutions
+                  Based On Client
+                  Requirements</li>
+              </ul>
             </div>
           </div>
+          <div class="card">
+            <h4 class="subheading">freelance</h4>
+            <p class="subtitle">Apphubs</p>
+            <p>junior frontend developer</p>
+            <div class="footer">
+              <span>2019</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>
+                  Worked On Accounting Software Modules, Like Sales, Purchase, Payments, Etc. Developed Basic And Common
+                  Components Of
+                  Some Of The Sections Of The Application.
+                </li>
+                <li>
+                  Worked On React & Angular Projects In UI Development & Some Coding.
+                </li>
+                <li>
+                  Htmlization Of Web Templates Using HTML5 & CSS3.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="subheading">freelance</h4>
+            <p class="subtitle">Quantum marketing</p>
+            <p>Graphic Designing</p>
+            <div class="footer">
+              <span>2019</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>Graphical Designing (Brochures, Logos, Banners, Pamphlets).</li>
+                <li>Video Editing, Creating PowerPoint Presentations.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="subheading">freelance</h4>
+            <p class="subtitle">City Link Tours & Travels</p>
+            <p>Video Editor</p>
+            <div class="footer">
+              <span>2019</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>Video Editing, Brochures, Advertisements</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h4 class="subheading">freelance</h4>
+            <p class="subtitle">New Look Interior</p>
+            <p>3D Interior designer</p>
+            <div class="footer">
+              <span>2019</span>
+            </div>
+            <div class="content">
+              <span>Achievements/Tasks</span>
+              <ul>
+                <li>3D Modelling</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-
-          <div class="educationBox box">
-            <h3>education</h3>
-            <div>
-              <div class="logo hide">
-                <span class="material-symbols-outlined">
-                  school
-                </span>
-              </div>
-              <div class="data">
-                <p data>
-                  Bachelor of Science in information technology (BSc. I.T.)<br>
-                  college: reena mehta college
-                </p>
-                <p developer>
-                  12th pass
-                </p>
-                <ul>
-                  <li>scored 50% in 12th HSC (2022)</li>
-                  <li>scored 69% in 10th SSC (2020)</li>
-                </ul>
-              </div>
+      </div>
+      <div class="rhsWrapper mainWrapper">
+        <div class="skills cardWrapper">
+          <div class="card">
+            <h3 class="heading">skills</h3>
+            <ul class="button-list">
+              <li>JavaScript</li>
+              <li>ReactJS</li>
+              <li>React Hooks</li>
+              <li>NodeJS</li>
+              <li>TailwindCSS</li>
+              <li>JSX</li>
+              <li>SCSS</li>
+              <li>Web Development</li>
+              <li>PUG</li>
+              <li>MUI</li>
+              <li>Git & GitHub</li>
+              <li>PostMan</li>
+              <li>Problem Solving</li>
+            </ul>
+          </div>
+        </div>
+        <div class="projects cardWrapper">
+          <div class="card">
+            <h3 class="heading">projects</h3>
+            <div class="content">
+              <p>Applicant Tracking System - ATS</p>
+              <ul>
+                <li>Tech Involved: <span class="bold">ReactJS, NodeJS, JavaScript, MUI, MongoDB</span></li>
+              </ul>
+              <p>Podar</p>
+              <ul>
+                <li><a target="_blank" href="https://bit.ly/3vgcetC">https://bit.ly/3vgcetC</a></li>
+                <li>Tech Involved: <span class="bold">PUG, HTML5, JavaScript, SCSS</span></li>
+              </ul>
+              <p>Tata</p>
+              <ul>
+                <li><a target="_blank" href="https://bit.ly/3hJHWwd">https://bit.ly/3hJHWwd</a></li>
+                <li>Tech Involved: <span class="bold">PUG, HTML5, JavaScript, SCSS</span></li>
+              </ul>
+              <p>Canon</p>
+              <ul>
+                <li><a target="_blank" href="https://bit.ly/3PP3iEW">https://bit.ly/3PP3iEW</a></li>
+                <li>Tech Involved: <span class="bold">PUG, HTML5, JavaScript, SCSS</span></li>
+              </ul>
+              <p>ICICI</p>
+              <ul>
+                <li><a target="_blank" href="https://bit.ly/3PTkkS4">https://bit.ly/3PTkkS4</a></li>
+                <li>Tech Involved: <span class="bold">PUG, HTML5, JavaScript, SCSS</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="achievements cardWrapper">
+          <div class="card">
+            <h3 class="heading">other intrests & expertise</h3>
+            <div class="content">
+              <p>Personality plus points</p>
+              <ul>
+                <li>Fast Learner</li>
+                <li>Tech savvy</li>
+                <li>Inquisitive Explorer</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="./assets/js/index.js"></script>
-  <!-- Footer Component -->
-  <header hidden class="hide" id="header" headerLinksProps=[{"title":"","href":""}]></header>
-  <footer hidden class="hide" id="footer" repoLink="https://github.com/Killer-Amaan-Ali/Resume/"></footer>
-  <script src="https://the-fox.netlify.app/the-fox/assets/js/common.js"></script>
-  <!-- Footer Component -->
+  </section>
 </body>
 
 </html>
