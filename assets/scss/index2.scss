@@ -57,6 +57,8 @@ body {
 		max-width: 450px;
 	}
 	@media only screen and (max-width: 450px) {
+		// mobile
+		// border: 1px solid red;
 		max-width: 375px;
 	}
 	@media only screen and (max-width: 375px) {
@@ -87,7 +89,7 @@ header {
 		text-transform: uppercase;
 		font-family: var(--heading1Family);
 		font-size: var(--h1FontSize);
-		font-weight: 500;
+		font-weight: 400;
 		margin-bottom: 5px;
 
 		@media only screen and (max-width: 1280px) {
@@ -103,7 +105,7 @@ header {
 			margin-bottom: 0px;
 		}
 		@media only screen and (max-width: 450px) {
-			--h1FontSize: 28px;
+			--h1FontSize: 38px;
 		}
 	}
 	h2 {
@@ -111,6 +113,7 @@ header {
 		color: var(--grayFont);
 		font-family: var(--heading2Family);
 		font-size: var(--h2FontSize);
+		font-weight: 400;
 
 		@media only screen and (max-width: 1280px) {
 			--h2FontSize: 20px;
@@ -122,7 +125,7 @@ header {
 			--h2FontSize: 14px;
 		}
 		@media only screen and (max-width: 450px) {
-			--h2FontSize: 12px;
+			--h2FontSize: 18px;
 		}
 	}
 }
@@ -169,16 +172,20 @@ header {
 			display: flex;
 			flex-wrap: wrap;
 			width: 100%;
+			@media only screen and (max-width: 450px) {
+				flex-wrap: none;
+				flex-direction: column;
+			}
 			li {
-				&:nth-child(even) {
-					padding-left: var(--middlePadding);
-				}
 				display: flex;
 				padding: 5px 0;
 				width: calc(50% - 2px);
 				align-items: center;
 				color: var(--darkGrayFont);
 				font-family: var(--heading1Family);
+				&:nth-child(even) {
+					padding-left: var(--middlePadding);
+				}
 				&.capitalize {
 					text-transform: capitalize;
 				}
@@ -193,7 +200,9 @@ header {
 					padding: 2px 0;
 				}
 				@media only screen and (max-width: 450px) {
-					padding: 1px 0;
+					--middlePadding: 0;
+					padding: 5px 0;
+					width: 100%;
 				}
 				span {
 					display: flex;
@@ -219,9 +228,9 @@ header {
 						width: 20px;
 					}
 					@media only screen and (max-width: 450px) {
-						margin: 0 3px;
-						font-size: 16px;
-						width: 16px;
+						margin: 0 8px;
+						font-size: 26px;
+						width: 26px;
 					}
 				}
 				p,
@@ -246,7 +255,7 @@ header {
 					}
 					@media only screen and (max-width: 450px) {
 						margin-left: 1px;
-						font-size: 8px;
+						font-size: 13px;
 					}
 				}
 			}
@@ -256,34 +265,42 @@ header {
 
 .main {
 	width: 100%;
+	padding: 30px 0;
 	.container {
 		display: flex;
+		@media only screen and (max-width: 450px) {
+			flex-direction: column;
+		}
 		.mainWrapper {
+			width: 50%;
 			&:first-child {
 				padding-right: var(--middlePadding);
 			}
 			&:last-child {
 				padding-left: var(--middlePadding);
 			}
-			width: 50%;
-			padding: 30px 5px;
 
 			@media only screen and (max-width: 1280px) {
 				--middlePadding: 30px;
-				padding: 30px 5px;
+				// padding: 30px 5px;
 			}
 			@media only screen and (max-width: 1024px) {
 				--middlePadding: 25px;
-				padding: 25px 5px;
+				// padding: 25px 5px;
 			}
 			@media only screen and (max-width: 768px) {
 				--middlePadding: 15px;
-				padding: 20px 5px;
+				// padding: 20px 5px;
 			}
 			@media only screen and (max-width: 450px) {
-				--middlePadding: 10px;
-				padding: 15px 3px;
+				--middlePadding: 0;
+				padding: 0 var(--middlePadding);
+				width: 100%;
 			}
+			// @media only screen and (max-width: 450px) {
+			// 	--middlePadding: 10px;
+			// 	padding: 15px 3px;
+			// }
 			.cardWrapper {
 				margin-bottom: 70px;
 
@@ -297,7 +314,7 @@ header {
 					margin-bottom: 20px;
 				}
 				@media only screen and (max-width: 450px) {
-					margin-bottom: 10px;
+					margin-bottom: 40px;
 				}
 				.card {
 					margin-bottom: 25px;
@@ -315,7 +332,7 @@ header {
 					}
 					@media only screen and (max-width: 450px) {
 						font-size: 8px;
-						margin-bottom: 15px;
+						margin-bottom: 20px;
 					}
 					h3.heading {
 						font-size: var(--h3FontSize);
@@ -337,8 +354,8 @@ header {
 							margin-bottom: 2px;
 						}
 						@media only screen and (max-width: 450px) {
-							--h3FontSize: 12px;
-							margin-bottom: 1px;
+							--h3FontSize: 22px;
+							margin-bottom: 15px;
 						}
 					}
 					h4.subheading {
@@ -356,7 +373,7 @@ header {
 							--h4FontSize: 14px;
 						}
 						@media only screen and (max-width: 450px) {
-							--h4FontSize: 10px;
+							--h4FontSize: 18px;
 						}
 					}
 					.subtitle {
@@ -378,7 +395,7 @@ header {
 							margin-bottom: 2px;
 						}
 						@media only screen and (max-width: 450px) {
-							font-size: 8px;
+							font-size: 16px;
 							margin-bottom: 1px;
 						}
 					}
@@ -395,7 +412,7 @@ header {
 							font-size: 8px;
 						}
 						@media only screen and (max-width: 450px) {
-							font-size: 6px;
+							font-size: 10px;
 						}
 					}
 					.footer {
@@ -419,8 +436,8 @@ header {
 							margin-top: 2px;
 						}
 						@media only screen and (max-width: 450px) {
-							font-size: 6px;
-							margin-top: 1px;
+							font-size: 11px;
+							margin-top: 2px;
 						}
 						span {
 							font-size: inherit;
@@ -474,10 +491,10 @@ header {
 								border-radius: 5px;
 							}
 							@media only screen and (max-width: 450px) {
-								font-size: 8px;
-								padding: 2px 8px;
-								margin: 0 5px 5px 0;
-								border-radius: 4px;
+								font-size: 12px;
+								padding: 4px 12px;
+								margin: 0 8px 8px 0;
+								border-radius: 5px;
 							}
 						}
 					}
@@ -509,7 +526,7 @@ header {
 								font-size: 8px;
 							}
 							@media only screen and (max-width: 450px) {
-								font-size: 6px;
+								font-size: 11px;
 							}
 						}
 						ul {
@@ -561,8 +578,9 @@ header {
 									padding-left: 5px;
 								}
 								@media only screen and (max-width: 450px) {
-									font-size: 8px;
-									padding-left: 3px;
+									font-size: 14px;
+									// padding-left: 5px;
+									margin: 0 5px;
 								}
 								a {
 									color: rgb(78, 196, 196);
@@ -583,7 +601,7 @@ header {
 								font-size: 12px;
 							}
 							@media only screen and (max-width: 450px) {
-								font-size: 10px;
+								font-size: 16px;
 							}
 						}
 						.bold {

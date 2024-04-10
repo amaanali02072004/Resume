@@ -111,7 +111,7 @@ header h1 {
 		text-transform: uppercase;
 		font-family: var(--heading1Family);
 		font-size: var(--h1FontSize);
-		font-weight: 500;
+		font-weight: 400;
 		margin-bottom: 5px;
 }
 @media only screen and (max-width: 1280px) {
@@ -133,7 +133,7 @@ header h1 {
 }
 @media only screen and (max-width: 450px) {
 		header h1 {
-				--h1FontSize: 28px;
+				--h1FontSize: 38px;
 		}
 }
 header h2 {
@@ -141,6 +141,7 @@ header h2 {
 		color: var(--grayFont);
 		font-family: var(--heading2Family);
 		font-size: var(--h2FontSize);
+		font-weight: 400;
 }
 @media only screen and (max-width: 1280px) {
 		header h2 {
@@ -159,7 +160,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		header h2 {
-				--h2FontSize: 12px;
+				--h2FontSize: 18px;
 		}
 }
 
@@ -225,6 +226,16 @@ header h2 {
 		    flex-wrap: wrap;
 		width: 100%;
 }
+@media only screen and (max-width: 450px) {
+		.socialsOuterWrapper .socialsInnerWrapper ul {
+				-ms-flex-wrap: none;
+				    flex-wrap: none;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+		}
+}
 .socialsOuterWrapper .socialsInnerWrapper ul li {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -260,7 +271,9 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.socialsOuterWrapper .socialsInnerWrapper ul li {
-				padding: 1px 0;
+				--middlePadding: 0;
+				padding: 5px 0;
+				width: 100%;
 		}
 }
 .socialsOuterWrapper .socialsInnerWrapper ul li span {
@@ -300,9 +313,9 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.socialsOuterWrapper .socialsInnerWrapper ul li span {
-				margin: 0 3px;
-				font-size: 16px;
-				width: 16px;
+				margin: 0 8px;
+				font-size: 26px;
+				width: 26px;
 		}
 }
 .socialsOuterWrapper .socialsInnerWrapper ul li p,
@@ -338,21 +351,29 @@ header h2 {
 		.socialsOuterWrapper .socialsInnerWrapper ul li p,
 		.socialsOuterWrapper .socialsInnerWrapper ul li a {
 				margin-left: 1px;
-				font-size: 8px;
+				font-size: 13px;
 		}
 }
 
 .main {
 		width: 100%;
+		padding: 30px 0;
 }
 .main .container {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
 }
+@media only screen and (max-width: 450px) {
+		.main .container {
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				        flex-direction: column;
+		}
+}
 .main .container .mainWrapper {
 		width: 50%;
-		padding: 30px 5px;
 }
 .main .container .mainWrapper:first-child {
 		padding-right: var(--middlePadding);
@@ -363,25 +384,23 @@ header h2 {
 @media only screen and (max-width: 1280px) {
 		.main .container .mainWrapper {
 				--middlePadding: 30px;
-				padding: 30px 5px;
 		}
 }
 @media only screen and (max-width: 1024px) {
 		.main .container .mainWrapper {
 				--middlePadding: 25px;
-				padding: 25px 5px;
 		}
 }
 @media only screen and (max-width: 768px) {
 		.main .container .mainWrapper {
 				--middlePadding: 15px;
-				padding: 20px 5px;
 		}
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper {
-				--middlePadding: 10px;
-				padding: 15px 3px;
+				--middlePadding: 0;
+				padding: 0 var(--middlePadding);
+				width: 100%;
 		}
 }
 .main .container .mainWrapper .cardWrapper {
@@ -404,7 +423,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper {
-				margin-bottom: 10px;
+				margin-bottom: 40px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card {
@@ -429,7 +448,7 @@ header h2 {
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card {
 				font-size: 8px;
-				margin-bottom: 15px;
+				margin-bottom: 20px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card h3.heading {
@@ -459,8 +478,8 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card h3.heading {
-				--h3FontSize: 12px;
-				margin-bottom: 1px;
+				--h3FontSize: 22px;
+				margin-bottom: 15px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card h4.subheading {
@@ -485,7 +504,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card h4.subheading {
-				--h4FontSize: 10px;
+				--h4FontSize: 18px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .subtitle {
@@ -514,7 +533,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card .subtitle {
-				font-size: 8px;
+				font-size: 16px;
 				margin-bottom: 1px;
 		}
 }
@@ -538,7 +557,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card > p {
-				font-size: 6px;
+				font-size: 10px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .footer {
@@ -573,8 +592,8 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card .footer {
-				font-size: 6px;
-				margin-top: 1px;
+				font-size: 11px;
+				margin-top: 2px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .footer span {
@@ -646,10 +665,10 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card ul.button-list li {
-				font-size: 8px;
-				padding: 2px 8px;
-				margin: 0 5px 5px 0;
-				border-radius: 4px;
+				font-size: 12px;
+				padding: 4px 12px;
+				margin: 0 8px 8px 0;
+				border-radius: 5px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .content {
@@ -697,7 +716,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card .content > span {
-				font-size: 6px;
+				font-size: 11px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .content ul {
@@ -764,8 +783,8 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card .content ul li {
-				font-size: 8px;
-				padding-left: 3px;
+				font-size: 14px;
+				margin: 0 5px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .content ul li a {
@@ -792,7 +811,7 @@ header h2 {
 }
 @media only screen and (max-width: 450px) {
 		.main .container .mainWrapper .cardWrapper .card .content p {
-				font-size: 10px;
+				font-size: 16px;
 		}
 }
 .main .container .mainWrapper .cardWrapper .card .content .bold {
